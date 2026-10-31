@@ -27,11 +27,11 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 220; /*Blue 220 - Purple 250 - Green 142 - Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-second: hsl(var(--hue-color), 80%, 30%);
   --first-color-alt: hsl(var(--hue-color), 57%, 53%);
   --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --title-color: hsl(var(--hue-color), 8%, 15%);
@@ -40,6 +40,9 @@
   --input-color: hsl(var(--hue-color), 70%, 96%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
+  --gradient: linear-gradient(135deg, hsl(200, 95%, 52%), hsl(225, 85%, 52%) 55%, hsl(250, 75%, 50%));
+  --gradient-deep: linear-gradient(135deg, hsl(215, 85%, 22%), hsl(230, 80%, 38%) 60%, hsl(205, 90%, 45%));
+  --glow: 0 8px 24px hsla(225, 85%, 50%, .28);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
@@ -97,6 +100,8 @@ body.dark-theme {
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
+  --gradient-deep: linear-gradient(135deg, hsl(220, 60%, 14%), hsl(225, 65%, 24%));
+  --glow: 0 8px 24px hsla(225, 85%, 50%, .35);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
@@ -1319,4 +1324,85 @@ body.dark-theme .footer__copy {
   .portfolio .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: -4.5rem;
   }
+}
+
+/*==================== BLUE GRADIENT THEME ====================*/
+body {
+  background-image:
+    radial-gradient(60rem 30rem at 85% -5%, hsla(205, 95%, 60%, .16), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 25%, hsla(235, 85%, 60%, .12), transparent 60%);
+  background-attachment: fixed;
+}
+
+.home__title,
+.section__title {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.section__subtitle {
+  color: var(--first-color);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-weight: var(--font-medium);
+}
+
+.button {
+  background: var(--gradient);
+  box-shadow: var(--glow);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.button:hover {
+  background: var(--gradient);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px hsla(225, 85%, 50%, .4);
+}
+
+.button--white,
+.button--white:hover {
+  background: #fff;
+}
+
+.home__blob {
+  fill: var(--first-color);
+  filter: drop-shadow(0 12px 28px hsla(225, 85%, 50%, .35));
+}
+
+.project__bg,
+.footer__bg,
+.project__container {
+  background: var(--gradient-deep);
+}
+
+.qualification__rounder,
+.qualification__line {
+  background: var(--gradient);
+}
+
+.services__content,
+.skills__content,
+.portfolio__content {
+  border: 1px solid hsla(225, 80%, 55%, .12);
+  box-shadow: 0 4px 16px hsla(225, 70%, 40%, .1);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.services__content:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glow);
+}
+
+.portfolio__visual--1 { background: linear-gradient(135deg, hsl(200, 95%, 52%), hsl(230, 80%, 50%)); }
+.portfolio__visual--2 { background: linear-gradient(135deg, hsl(190, 85%, 45%), hsl(220, 85%, 52%)); }
+.portfolio__visual--3 { background: linear-gradient(135deg, hsl(215, 90%, 55%), hsl(250, 75%, 55%)); }
+.portfolio__visual--4 { background: linear-gradient(135deg, hsl(225, 70%, 25%), hsl(210, 90%, 50%)); }
+
+/* Placeholder photos are purple; shift them to the blue palette */
+.home__blob-img,
+.about__img {
+  filter: hue-rotate(-32deg) saturate(1.15);
 }
