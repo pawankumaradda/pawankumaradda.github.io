@@ -1542,3 +1542,56 @@ body {
 
 .nav__link:hover,
 .active-link { color: hsl(226, 85%, 48%); }
+
+/*==================== AI-NATIVE PM ====================*/
+.ainative__intro {
+  max-width: 40rem;
+  margin: 0 auto var(--mb-2);
+  text-align: center;
+  line-height: 1.7;
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+}
+
+.ainative__grid {
+  grid-template-columns: 1fr;
+}
+
+.ainative__card {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  background:
+    radial-gradient(14rem 9rem at 100% 0%, hsla(190, 100%, 60%, .35), transparent 60%),
+    linear-gradient(135deg, hsl(222, 90%, 18%), hsl(226, 85%, 34%) 60%, hsl(212, 95%, 44%));
+  box-shadow: 0 14px 30px hsla(225, 80%, 40%, .3);
+  transition: transform .3s;
+}
+
+.ainative__card:hover { transform: translateY(-6px); }
+
+.ainative__card p {
+  color: hsla(0, 0%, 100%, .86);
+  line-height: 1.6;
+  font-size: var(--small-font-size);
+}
+
+.ainative__icon {
+  display: inline-block;
+  font-size: 1.75rem;
+  margin-bottom: var(--mb-0-75);
+  color: hsl(195, 100%, 80%);
+}
+
+.ainative__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #fff;
+  margin-bottom: var(--mb-0-5);
+}
+
+@media screen and (min-width: 768px) {
+  .ainative__container { max-width: 968px; }
+  .ainative__grid { grid-template-columns: repeat(2, 1fr); }
+}
