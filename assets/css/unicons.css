@@ -1,0 +1,49 @@
+/* Unicons line (subset) - https://iconscout.com/unicons - Apache 2.0 */
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-10.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EA5C-EA98;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-11.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EA99-EAD6;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-12.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EAD7-EB13;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-13.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EB14-EB53;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-15.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EB91-EBCC;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-16.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EBCD-EC08;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-17.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EC09-EC44;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-18.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EC45-EC80;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-19.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EC81-ECBC;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-2.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E878-E8B3;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-3.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E8B4-E8EF;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-4.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E8F0-E92B;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-5.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E92C-E967;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-7.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E9A5-E9E2;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-8.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+E9E3-EA1E;}
+@font-face{font-family:'unicons-line';src:url('../fonts/unicons-9.woff2') format('woff2');font-weight:normal;font-style:normal;font-display:block;unicode-range:U+EA1F-EA5B;}
+[class^="uil-"]:before,[class*=" uil-"]:before{font-family:"unicons-line";font-style:normal;font-weight:normal;speak:none;display:inline-block;text-decoration:inherit;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.uil-angle-down:before{content:'\eb3a';}
+.uil-angle-left-b:before{content:'\ec49';}
+.uil-angle-right-b:before{content:'\eb9f';}
+.uil-apps:before{content:'\eabf';}
+.uil-arrow-down:before{content:'\ebe9';}
+.uil-arrow-right:before{content:'\ebb5';}
+.uil-arrow-up:before{content:'\ebb6';}
+.uil-briefcase-alt:before{content:'\e8ac';}
+.uil-calendar-alt:before{content:'\e8dc';}
+.uil-chart-growth:before{content:'\e8cb';}
+.uil-check-circle:before{content:'\e9c2';}
+.uil-compass:before{content:'\e8e0';}
+.uil-dollar-sign-alt:before{content:'\e8b9';}
+.uil-download-alt:before{content:'\eb4d';}
+.uil-estate:before{content:'\eca5';}
+.uil-file-alt:before{content:'\e94b';}
+.uil-graduation-cap:before{content:'\e905';}
+.uil-linkedin-alt:before{content:'\ec16';}
+.uil-map-marker:before{content:'\e8ec';}
+.uil-message:before{content:'\eb23';}
+.uil-moon:before{content:'\ea8b';}
+.uil-mouse-alt:before{content:'\e967';}
+.uil-processor:before{content:'\eaf2';}
+.uil-robot:before{content:'\ebfb';}
+.uil-rocket:before{content:'\ec61';}
+.uil-scenery:before{content:'\ea40';}
+.uil-sitemap:before{content:'\eb08';}
+.uil-times:before{content:'\e9b8';}
+.uil-user:before{content:'\ea0d';}
+.uil-users-alt:before{content:'\ea11';}
+.uil-sun:before{content:'\e9cc';}
