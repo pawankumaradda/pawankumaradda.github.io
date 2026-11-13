@@ -91,6 +91,9 @@
                         <a href="https://www.linkedin.com/in/pawankumaradda/" target="_blank" rel="noopener" class="home__social-icon" aria-label="LinkedIn">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
+                        <a href="https://github.com/pawankumaradda" target="_blank" rel="noopener" class="home__social-icon" aria-label="GitHub">
+                            <i class="uil uil-github"></i>
+                        </a>
                     </div>
 
                     <div class="home__img">
@@ -137,8 +140,6 @@
             <span class="section__subtitle">My introduction</span>
 
             <div class="about__container container grid">
-                <img src="assets/img/about.jpg" alt="Pawan Kumar" class="about__img">
-
                 <div class="about__data">
                     <p class="about__description">I'm a Senior Director of Product Management at Salesforce. I started out as a software engineer, earned an MBA at UBC, and have since led products at Salesforce, Gainsight and Clio, co-founding a startup, Mentrio, along the way.</p>
                     <p class="about__description">I care about clear strategy, strong product teams, and turning new technology (today, AI agents) into products customers trust.</p>
@@ -159,9 +160,9 @@
                     </div>
 
                     <div class="about__buttons">
-                        <a download href="assets/pdf/Pawan-Kumar-Resume.pdf" class="button button--flex">
-                            Download CV <i class="uil uil-download-alt button__icon"></i>
-                        </a>
+                        <button type="button" class="button button--flex" id="cv-open" aria-haspopup="dialog">
+                            View CV <i class="uil uil-file-alt button__icon"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -284,7 +285,6 @@
                 </div>
             </div>
         </section>
-
         <section class="qualification section">
             <h2 class="section__title">Journey</h2>
             <span class="section__subtitle">My path so far</span>
@@ -709,6 +709,14 @@
                         </div>
                     </a>
 
+                    <a href="https://github.com/pawankumaradda" target="_blank" rel="noopener" class="contact__information">
+                        <i class="uil uil-github contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">GitHub</h3>
+                            <span class="contact__subtitle">github.com/pawankumaradda</span>
+                        </div>
+                    </a>
+
                     <div class="contact__information">
                         <i class="uil uil-map-marker contact__icon"></i>
                         <div>
@@ -748,12 +756,35 @@
                     <a href="https://www.linkedin.com/in/pawankumaradda/" target="_blank" rel="noopener" class="footer__social" aria-label="LinkedIn">
                         <i class="uil uil-linkedin-alt"></i>
                     </a>
+                    <a href="https://github.com/pawankumaradda" target="_blank" rel="noopener" class="footer__social" aria-label="GitHub">
+                        <i class="uil uil-github"></i>
+                    </a>
                 </div>
             </div>
 
             <p class="footer__copy">&#169; <span id="year">2026</span> Pawan Kumar. Design based on <a href="https://github.com/bedimcode/responsive-portfolio-website-Alexa" target="_blank" rel="noopener">Alexa by Bedimcode</a>.</p>
         </div>
     </footer>
+
+    <!--==================== CV MODAL ====================-->
+    <div class="cv-modal" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-title" hidden>
+        <div class="cv-modal__content">
+            <div class="cv-modal__header">
+                <h3 class="cv-modal__title" id="cv-title">Pawan Kumar &middot; CV</h3>
+                <div class="cv-modal__actions">
+                    <a class="button button--flex button--small" id="cv-download"
+                       href="https://docs.google.com/document/d/1IZd_F4XSC_HM8zD1DvkswiYsufk8v1eOAeijJEq5ua4/export?format=pdf" target="_blank" rel="noopener">
+                        Download PDF <i class="uil uil-download-alt button__icon"></i>
+                    </a>
+                    <button type="button" class="cv-modal__close" id="cv-close" aria-label="Close CV"><i class="uil uil-times"></i></button>
+                </div>
+            </div>
+            <div class="cv-modal__body">
+                <iframe id="cv-frame" title="Pawan Kumar CV" data-src="https://docs.google.com/document/d/1IZd_F4XSC_HM8zD1DvkswiYsufk8v1eOAeijJEq5ua4/preview" loading="lazy"></iframe>
+                <p class="cv-modal__fallback">Can't see the CV? <a href="https://docs.google.com/document/d/1IZd_F4XSC_HM8zD1DvkswiYsufk8v1eOAeijJEq5ua4/edit?usp=sharing" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+            </div>
+        </div>
+    </div>
 
     <!--==================== SCROLL TOP ====================-->
     <a href="#" class="scrollup" id="scroll-up" aria-label="Back to top">

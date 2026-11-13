@@ -185,3 +185,34 @@ themeButton.addEventListener('click', () => {
 /*==================== FOOTER YEAR ====================*/
 const yearEl = document.getElementById('year')
 if (yearEl) yearEl.textContent = new Date().getFullYear()
+
+/*==================== CV MODAL ====================*/
+const cvModal = document.getElementById('cv-modal'),
+      cvOpen = document.getElementById('cv-open'),
+      cvClose = document.getElementById('cv-close'),
+      cvFrame = document.getElementById('cv-frame')
+
+function openCv() {
+    if (!cvFrame.src) cvFrame.src = cvFrame.dataset.src // load the doc only when first opened
+    cvModal.hidden = false
+    // next frame so the fade-in transition runs
+    requestAnimationFrame(() => cvModal.classList.add('active-modal'))
+    document.body.classList.add('modal-open')
+    cvClose.focus()
+}
+
+function closeCv() {
+    cvModal.classList.remove('active-modal')
+    document.body.classList.remove('modal-open')
+    setTimeout(() => { if (!cvModal.classList.contains('active-modal')) cvModal.hidden = true }, 300)
+    cvOpen.focus()
+}
+
+if (cvModal && cvOpen) {
+    cvOpen.addEventListener('click', openCv)
+    cvClose.addEventListener('click', closeCv)
+    cvModal.addEventListener('click', (e) => { if (e.target === cvModal) closeCv() })
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && cvModal.classList.contains('active-modal')) closeCv()
+    })
+}
