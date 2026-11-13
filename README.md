@@ -2,7 +2,7 @@
 
 Personal portfolio site: product leader, B2B SaaS & AI.
 
-Built on the [Alexa responsive portfolio template](https://github.com/bedimcode/responsive-portfolio-website-Alexa) by Bedimcode. Plain HTML, CSS and JavaScript with no build step. Fonts (Poppins) and icons (Unicons) are self-hosted in `assets/`, so the site has no external dependencies.
+A minimal one-page portfolio in plain HTML, CSS and JavaScript with no build step. Fonts (Poppins) and icons (Unicons subset) are self-hosted in `assets/`, so the site has no external dependencies. Light and dark mode follow the visitor's system setting, with a toggle in the header.
 
 ## Publish on GitHub Pages (about 5 minutes)
 
@@ -19,9 +19,9 @@ Built on the [Alexa responsive portfolio template](https://github.com/bedimcode/
 
 | What | Where |
 |---|---|
-| Hero photo (blob shape) | `assets/img/profile.jpg`, any photo works because it is cropped to fill the blob |
-| CV popup | the Google Doc ID in the `cv-modal` section of `index.html` (the doc must be shared as "Anyone with the link can view") |
-| Text, roles, links | `index.html` |
-| Theme color | `--hue-color` at the top of `assets/css/styles.css` (250 purple, 230 blue, 142 green, 340 pink) |
+| Hero photo | `assets/img/profile.jpg` (portrait, about 6:7) |
+| CV popup | the Google Doc ID in the `cv-modal` block of `index.html` (the doc must be shared as "Anyone with the link can view") |
+| Text, products, articles, experience | `index.html`, one section per block |
+| Accent colour | `--accent` at the top of `assets/css/styles.css` (light and dark values) |
 
-To update the live site, open the file on GitHub, click the pencil icon (or **Add file → Upload files** to replace an image), then commit. GitHub Pages redeploys automatically within a minute or two.
+To update the live site, edit the file on GitHub (pencil icon, or **Add file → Upload files** to replace an image) and commit. GitHub Pages redeploys within a minute or two.
