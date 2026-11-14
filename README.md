@@ -1,4 +1,4 @@
-# Pawan Kumar · Portfolio
+# Pawan Kumar Adda · Portfolio
 
 Personal portfolio site: product leader, B2B SaaS & AI.
 
