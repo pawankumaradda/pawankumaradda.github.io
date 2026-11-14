@@ -25,3 +25,5 @@ A minimal one-page portfolio in plain HTML, CSS and JavaScript with no build ste
 | Accent colour | `--accent` at the top of `assets/css/styles.css` (light and dark values) |
 
 To update the live site, edit the file on GitHub (pencil icon, or **Add file → Upload files** to replace an image) and commit. GitHub Pages redeploys within a minute or two.
+
+After changing `styles.css` or `main.js`, bump the `?v=` number on their links in `index.html` so visitors' browsers fetch the new file instead of a cached copy.
