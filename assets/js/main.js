@@ -33,31 +33,43 @@ syncThemeIcon()
 /* Footer year */
 document.getElementById('year').textContent = new Date().getFullYear()
 
-/* CV modal */
-const cvModal = document.getElementById('cv-modal')
-const cvClose = document.getElementById('cv-close')
-const cvFrame = document.getElementById('cv-frame')
+/* Viewer modal: CV, slide decks and videos */
+const viewer = document.getElementById('viewer')
+const viewerFrame = document.getElementById('viewer-frame')
+const viewerTitle = document.getElementById('viewer-title')
+const viewerAction = document.getElementById('viewer-action')
+const viewerFallback = document.getElementById('viewer-fallback')
+const viewerClose = document.getElementById('viewer-close')
 let lastFocus = null
 
-function openCv(e) {
+function openViewer(e) {
+    const d = e.currentTarget.dataset
     lastFocus = e.currentTarget
-    if (!cvFrame.src) cvFrame.src = cvFrame.dataset.src
-    cvModal.hidden = false
-    requestAnimationFrame(() => cvModal.classList.add('is-open'))
+    viewerTitle.textContent = d.viewTitle
+    viewerFrame.title = d.viewTitle
+    viewerAction.textContent = d.viewAction
+    viewerAction.href = d.viewHref
+    viewerFallback.href = d.viewOpen || d.viewHref
+    viewer.classList.toggle('cv-modal--video', d.viewKind === 'video')
+    if (viewerFrame.getAttribute('src') !== d.viewSrc) viewerFrame.src = d.viewSrc
+    viewer.hidden = false
+    requestAnimationFrame(() => viewer.classList.add('is-open'))
     document.body.classList.add('modal-open')
-    cvClose.focus()
+    viewerClose.focus()
 }
 
-function closeCv() {
-    cvModal.classList.remove('is-open')
+function closeViewer() {
+    viewer.classList.remove('is-open')
     document.body.classList.remove('modal-open')
-    setTimeout(() => { if (!cvModal.classList.contains('is-open')) cvModal.hidden = true }, 250)
+    // stop video playback when closing
+    if (viewer.classList.contains('cv-modal--video')) viewerFrame.removeAttribute('src')
+    setTimeout(() => { if (!viewer.classList.contains('is-open')) viewer.hidden = true }, 250)
     if (lastFocus) lastFocus.focus()
 }
 
-document.querySelectorAll('[data-cv-open]').forEach(b => b.addEventListener('click', openCv))
-cvClose.addEventListener('click', closeCv)
-cvModal.addEventListener('click', e => { if (e.target === cvModal) closeCv() })
+document.querySelectorAll('[data-view-src]').forEach(b => b.addEventListener('click', openViewer))
+viewerClose.addEventListener('click', closeViewer)
+viewer.addEventListener('click', e => { if (e.target === viewer) closeViewer() })
 document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && cvModal.classList.contains('is-open')) closeCv()
+    if (e.key === 'Escape' && viewer.classList.contains('is-open')) closeViewer()
 })

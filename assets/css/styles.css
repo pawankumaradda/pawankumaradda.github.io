@@ -330,3 +330,14 @@ body.modal-open { overflow: hidden; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/*==================== TALKS + VIEWER ====================*/
+.card--talk { display: flex; flex-direction: column; }
+.card--talk .tag { align-self: flex-start; }
+.card--talk p { flex: 1; }
+.card__actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.25rem; }
+.icon-play { width: .85em; height: .85em; }
+.cv-modal--video .cv-modal__content { height: auto; max-width: 960px; }
+.cv-modal--video .cv-modal__body { background: #000; }
+.cv-modal--video iframe { flex: none; aspect-ratio: 16 / 9; height: auto; }
+.cv-modal--video .cv-modal__fallback { display: none; }
